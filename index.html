@@ -1,0 +1,1611 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f4f4f4;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 10px;
+        }
+        .search {
+            display: flex;
+            align-items: center;
+        }
+        .search input {
+            padding: 5px;
+            margin-right: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .main-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px;
+        }
+        .text-content {
+            max-width: 50%;
+        }
+        .text-content h1 {
+            color: #2d3e2f;
+        }
+        .text-content p {
+            line-height: 1.6;
+            color: #666;
+        }
+        .buy-button {
+            background-color: #2d3e2f;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .image {
+            max-width: 45%;
+        }
+        .image img {
+            width: 100%;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="links">
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Blog</a>
+            <a href="#">Site Map</a>
+            <a href="#">Eng</a>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search this site">
+            <button>🔍</button>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="text-content">
+            <h1>Lorem ipsum dolor sit amet</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend tincidunt posuere eu risus cursus. Senectus sed maecenas viverra tempus at.</p>
+            <a href="#" class="buy-button">Buy Now</a>
+        </div>
+        <div class="image">
+            <img src="https://via.placeholder.com/400" alt="Leaf">
+        </div>
+    </div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlantMe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            /* background-color: #f4f4f4; */
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 10px;
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+        }
+
+        .search input {
+            padding: 5px;
+            margin-right: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .main-content {
+            display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 78px; */
+    background-color: #f9f9f9;
+    width: fit-content;
+    padding: 40px 304px;
+        }
+
+        .text-content {
+            max-width: 50%;
+        }
+
+        .text-content h1 {
+            color: #2d3e2f;
+        }
+
+        .text-content p {
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .buy-button {
+            background-color: #2d3e2f;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .image {
+            max-width: 45%;
+        }
+
+        .image img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: #e0e8e0;
+        }
+
+        .feature-box {
+            text-align: center;
+            max-width: 30%;
+        }
+
+        .contact-section {
+            background-color: #d8d8d8;
+            padding: 40px;
+        }
+
+        .contact-section form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .contact-section input,
+        .contact-section textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-section button {
+            grid-column: span 2;
+            padding: 10px;
+            background-color: #2d3e2f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .footer-main {
+           
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 24px 0px;
+gap: 10px;
+/* width: 1440px; */
+height: 307px;
+
+background: #F9F9F9;
+        }
+        .footer-sub{
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 32px 220px;
+gap: 244px;
+
+/* width: 1440px; */
+height: 191px;
+
+
+/* Inside auto layout */
+flex: none;
+
+        }
+
+        .page1-text {
+            /* Body Text */
+
+            width: 536px;
+            height: 105px;
+
+            font-family: 'Outfit';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 150%;
+            /* or 21px */
+            display: flex;
+            align-items: center;
+
+            /* Black */
+            color: #111111;
+
+
+            /* Inside auto layout */
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+
+        }
+
+        .header3-text {
+            /* Lorem ipsum dolor sit amet */
+
+            width: 647px;
+            height: 29px;
+
+            font-family: 'Outfit';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 120%;
+            /* identical to box height, or 29px */
+            display: flex;
+            align-items: center;
+
+            color: #3A6150;
+
+
+            /* Inside auto layout */
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+
+        }
+
+        .h1-text {
+            /* Header */
+
+            width: 647px;
+            height: 58px;
+
+            font-family: 'Outfit';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 120%;
+            /* identical to box height, or 58px */
+            display: flex;
+            align-items: center;
+
+            color: #3A6150;
+
+
+            /* Inside auto layout */
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+
+        }
+
+        .img1-css {
+            /* unsplash:W5XTTLpk1-I */
+
+            width: 648px;
+            height: 648px;
+
+            background: url(.jpg), #578645;
+            border-radius: 2px;
+
+            /* Inside auto layout */
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+
+        }
+
+        .about-css {
+            /* About Us */
+
+            width: 73px;
+            height: 27px;
+
+            font-family: 'Outfit';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 150%;
+            /* identical to box height, or 27px */
+            /* display: flex; */
+            align-items: center;
+
+            /* Black */
+            color: #111111;
+
+
+            /* Inside auto layout */
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+
+        }
+
+        .logo-css {
+            /* Logo */
+
+            /* Auto layout */
+            /* display: flex; */
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 2px;
+
+            /* position: absolute; */
+            width: 34px;
+            height: 34px;
+            left: 10px;
+            top: 0px;
+
+
+        }
+
+        .right-border1 {
+            /* Vector 17 */
+
+            width: 0px;
+            height: 18px;
+
+            /* Black */
+            border: 1px solid #111111;
+
+            /* Inside auto layout */
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+
+        }
+
+        .searchbar-css {
+            /* Input Search */
+
+            box-sizing: border-box;
+
+            /* Auto layout */
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 11px 15px 11px 16px;
+            gap: 10px;
+
+            width: 376px;
+            height: 48px;
+
+            background: #FFFFFF;
+            border: 2px solid #3A6150;
+            border-radius: 2px 0px 0px 2px;
+
+            /* Inside auto layout */
+            flex: none;
+            order: 0;
+            flex-grow: 1;
+
+
+            font-family: 'Outfit';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+
+            color: rgba(58, 97, 80, 0.7);
+
+        }
+
+        .search-btn-css {
+            /* Search Button */
+
+            /* Auto layout */
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 8px;
+            gap: 10px;
+
+            width: 48px;
+            height: 48px;
+
+            background: #3A6150;
+            border-radius: 0px 2px 2px 0px;
+
+            /* Inside auto layout */
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+
+        }
+
+        .search-main-css {
+            /* Search */
+
+            /* Auto layout */
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 0px;
+
+            width: 424px;
+            height: 48px;
+
+
+            /* Inside auto layout */
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+
+        }
+
+        .buynow-btn-css {
+            /* Button/Buy Now */
+
+            /* Auto layout */
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 11px 63px;
+            gap: 10px;
+
+            width: 196px;
+            height: 48px;
+
+            background: #3A6150;
+            border-radius: 2px;
+
+            /* Inside auto layout */
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+            text-decoration: none;
+
+
+            /* Buy Now */
+
+            width: 70px;
+            height: 26px;
+
+            font-family: 'Outfit';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 150%;
+            /* or 27px */
+            display: flex;
+            align-items: center;
+
+            /* White */
+            color: #FFFFFF;
+
+
+            /* Inside auto layout */
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+
+        }
+
+        .aboutus-main {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+    padding: 10px 235px;
+    gap: 18px;
+    width: fit-content;
+            height: 449px;
+            background: #FFFFFF;
+        }
+
+        .about-box1 {
+            /* Frame 2258 */
+
+            /* Auto layout */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 24px 24px 35px;
+            gap: 10px;
+
+            width: 647px;
+            height: 289px;
+
+            background: #3A6150;
+            border-radius: 2px;
+
+            /* Inside auto layout */
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+
+        }
+
+        .about-box1-1 {
+            /* Frame 2257 */
+
+            /* Auto layout */
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 18px;
+
+            width: 599px;
+            height: 230px;
+
+
+            /* Inside auto layout */
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+
+        }
+
+        .about-box2 {
+            /* Frame 2260 */
+
+            /* Auto layout */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 24px 24px 35px;
+            gap: 10px;
+
+            width: 647px;
+            height: 289px;
+
+            background: #3A6150;
+            border-radius: 2px;
+
+            /* Inside auto layout */
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+
+        }
+
+        .about-img1 {
+            /* Rectangle 570 */
+            width: 200px;
+            height: 300px;
+            background: url(.jpg), #C4C4C4;
+        }
+
+        .about-desc1 {
+            /* Auto layout */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            /* gap: 23px; */
+            width: 401px;
+            height: 230px;
+
+        }
+
+        .about-footer1 {
+            /* Learn more about → */
+
+            /* width: 401px;
+height: 21px; */
+            font-family: 'Outfit';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 150%;
+            /* identical to box height, or 21px */
+            /* display: flex; */
+            align-items: center;
+            text-decoration-line: underline;
+
+            /* White */
+            color: #FFFFFF;
+        }
+
+        .about-desc-data1 {
+            /* About Us */
+
+            width: 401px;
+            height: 186px;
+
+            font-family: 'Outfit';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            /* line-height: 150%; */
+            /* identical to box height, or 27px */
+            /* display: flex; */
+            align-items: center;
+
+            color: #FFFFFF;
+        }
+
+        .about-head {
+            /* About Us */
+
+            width: 401px;
+            height: 27px;
+
+            font-family: 'Outfit';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 150%;
+            /* identical to box height, or 27px */
+            display: flex;
+            align-items: center;
+
+            color: #FFFFFF;
+
+        }
+
+        .contactus-main {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px 64px 20px;
+            gap: 10px;
+            width: fit-content;
+            height: 837px;
+            background: #71837B;
+            left: 64px;
+            top: 80px;
+            filter: drop-shadow(3px 4px 32px rgba(0, 0, 0, 0.12));        
+        }
+.contactus-main-combination{
+    display: flex;
+    align-items: flex-start;
+    width: 1352px;
+    height: 826px;
+    padding:0px 200px 0px 200px;
+}       
+
+        .contactus-main-sub {
+            /* position: absolute; */
+            width: 1312px;
+            height: 637px;
+            left: 64px;
+            top: 80px;
+            padding-top:100px;
+            filter: drop-shadow(3px 4px 32px rgba(0, 0, 0, 0.12));
+
+        }
+
+        .contactus-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            /* padding: 48px 20px 48px 28px; */
+            gap: 10px;
+            left: 478px;
+            top: 80px;
+            border-radius: 0px 12px 12px 0px;
+            padding-top: 105px;
+    padding-left: 0px;
+    padding-right: 40px;
+
+        }
+
+        .contact-right-sub1 {
+            display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 27px;
+    background: white;
+    height: 584px;
+        }
+
+        .label-fname {
+            /* Frame 2280 */
+
+            /* Auto layout */
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 18px;
+            width: 416px;
+        }
+
+        .form-inputs {
+            /* Imput / Basic */
+
+            box-sizing: border-box;
+
+            /* Auto layout */
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 12px 12px 12px 8px;
+            gap: 10px;
+
+            width: 416px;
+            height: 44px;
+
+            border: 2px solid #3A6150;
+            border-radius: 3px;
+        }
+
+        .requred-css {
+
+            /* Body Text */
+            font-family: 'Outfit';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            /* identical to box height, or 143% */
+
+            color: #FF0000;
+        }
+
+        .contact-right-inputs {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 18px;
+
+            width: 850px;
+        }
+
+        .radio-btn {
+            /* Frame 2277 */
+
+            /* Auto layout */
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding-top: 24px;
+            gap: 36px;
+
+            width: 850px;
+            height: 40px;
+
+        }
+
+        .radio1 {
+            /* Radio */
+
+            /* Auto layout */
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0px;
+
+            width: 123px;
+            height: 40px;
+
+
+            /* Inside auto layout */
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+
+        }
+
+        .form-input-radio {
+            /* Vector */
+
+            left: 8.33%;
+            right: 8.33%;
+            top: 8.33%;
+            bottom: 8.33%;
+
+            background: #3A6150;
+
+        }
+
+        .radio-label {
+            font-family: 'Outfit';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 143%;
+            /* identical to box height, or 20px */
+            letter-spacing: 0.15px;
+
+            /* Evinced / Black */
+            color: #131516;
+        }
+
+        .text-area-css {
+            /* Text here... */
+
+            width: 830px;
+            height: 80px;
+
+            /* Body Text */
+            font-family: 'Outfit';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            /* or 143% */
+            display: flex;
+            align-items: center;
+
+            color: rgba(17, 17, 17, 0.5);
+
+
+            /* Inside auto layout */
+            flex: none;
+            order: 0;
+            flex-grow: 1;
+
+        }
+
+        .text-message {
+            /* * Input Label */
+
+            width: 55px;
+            height: 20px;
+
+            /* Body Text */
+            font-family: 'Outfit';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            /* identical to box height, or 143% */
+
+            /* Black */
+            color: #111111;
+
+
+            /* Inside auto layout */
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+
+        }
+
+        .form-input-checkbox {
+            left: 0%;
+            right: 0%;
+            top: 0%;
+            bottom: 0%;
+        }
+
+        .checkbox-label {
+            /* Checkbox */
+
+            width: 108px;
+            height: 20px;
+
+            /* Body Text */
+            font-family: 'Outfit';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            /* identical to box height, or 143% */
+
+            /* Evinced/Black */
+            color: #131516;
+        }
+
+        .form-input-checkbox2 {
+            left: 12.5%;
+            right: 12.5%;
+            top: 12.5%;
+            bottom: 12.5%;
+
+        }
+
+        .checkbox-label2 {
+            /* Accept the Terms 2 */
+
+            width: 118px;
+            height: 20px;
+
+            /* Body Text */
+            font-family: 'Outfit';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            /* identical to box height, or 143% */
+
+            /* Evinced/Black */
+            color: #131516;
+        }
+
+        .send-message {
+            display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* padding: 80px 64px 120px; */
+    gap: 10px;
+    width: 230px;
+    height: 56px;
+     background: #3A6150;
+border:none;
+color: white;
+    padding-top: 17px;
+        }
+        .contact-right-sub2{
+            /* Frame 2268 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 11px 63px;
+gap: 10px;
+
+width: 196px;
+height: 49px;
+
+background: #3A6150;
+border-radius: 2px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+        }
+        .send-message-main{
+            width: 855px;
+    flex: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+        }
+        .footer-end{
+            /* Frame 2308 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px 64px;
+gap: 263px;
+
+/* width: 1440px; */
+height: 20px;
+        }
+        .plantme{
+            /* © 2022 PlantMe. All Rights Reserved */
+
+width: 769px;
+height: 20px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 145%;
+/* or 20px */
+text-align: right;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+        }
+        .footer-end2{
+            /* Frame 2305 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding-bottom: 20px;
+gap: 15px;
+
+width: 280px;
+height: 20px;
+
+        }
+        .privacy{
+            /* Privacy Policy */
+
+width: 86px;
+height: 20px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 145%;
+/* or 20px */
+
+color: rgba(17, 17, 17, 0.5);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+        }
+        .Termsofservice{
+/* Terms of service */
+
+width: 101px;
+height: 20px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 145%;
+/* or 20px */
+
+color: rgba(17, 17, 17, 0.5);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+        }
+        .Language{
+            /* Language */
+
+width: 63px;
+height: 20px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 145%;
+/* or 20px */
+
+color: rgba(17, 17, 17, 0.5);
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+padding-bottom: 20px;
+        }
+        .footer-top{
+            /* Frame 2304 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px 64px;
+gap: 244px;
+
+width: 1440px;
+height: 191px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+        }
+        .footer-top-sub1{
+/* Frame 2300 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 31px;
+
+width: 533px;
+height: 191px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+        }
+        .footer-top-sub2{
+/* Frame 2296 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 16px;
+
+width: 88px;
+height: 156px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+        }
+        .footer-top-sub3{
+/* Frame 2303 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 40px;
+
+width: 202px;
+height: 175.08px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+        }
+.footer-top-sub1-1{
+   /* Frame 2299 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-end;
+padding: 0px;
+gap: 30px;
+
+width: 533px;
+height: 54px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+}
+.footer-subscribe-text{
+    /* Subscribe and be the first to know about our news and promotions. */
+
+width: 528px;
+height: 26px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 145%;
+/* or 26px */
+
+color: #000000;
+}
+.footer-plantme-text{
+    /* PlantMe */
+
+width: 186px;
+height: 60px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 60px;
+
+color: #000000;
+}
+.footer-input{
+    /* Frame 2298 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 11px;
+
+width: 308px;
+height: 37px;
+border-left: none;
+    border-right: none;
+    outline: none;
+    border-top: none;
+
+}
+.subscribe-btn{
+    /* Main button */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 131px;
+gap: 10px;
+
+width: 195px;
+height: 54px;
+color: white;
+background: #3A6150;
+
+}
+.plantme-bottom{
+    /* Frame 2299 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-end;
+padding: 0px;
+gap: 30px;
+
+width: 533px;
+height: 54px;
+}
+.aboutus-text{
+    /* About Us */
+
+width: 73px;
+height: 27px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 150%;
+/* identical to box height, or 27px */
+
+/* Black */
+color: #111111;
+}
+.contactus-text{
+    /* Contact Us */
+
+width: 88px;
+height: 27px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 150%;
+/* identical to box height, or 27px */
+
+/* Black */
+color: #111111;
+}
+.blog-text{
+/* Blog */
+
+width: 36px;
+height: 27px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 150%;
+/* identical to box height, or 27px */
+
+/* Black */
+color: #111111;
+}
+.sitemap-text{
+/* Site Map */
+
+width: 70px;
+height: 27px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 150%;
+/* identical to box height, or 27px */
+
+/* Black */
+color: #111111;
+}
+.footer-sub3-contact{
+    /* Contacts */
+
+width: 72px;
+height: 26px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 145%;
+/* or 26px */
+
+color: #000000;
+}
+.footer-sub3-phone{
+/* +38 063 072 0121 */
+
+width: 137px;
+height: 26px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 145%;
+/* or 26px */
+
+color: rgba(0, 0, 0, 0.6);
+}
+.footer-sub3-email{
+/* plantme.store@gmail.com */
+
+width: 202px;
+height: 26px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 145%;
+/* or 26px */
+letter-spacing: -0.02em;
+text-decoration-line: underline;
+
+color: rgba(0, 0, 0, 0.6);
+}
+.visa-img{
+    /* image 46 */
+
+width: 50px;
+height: 28.12px;
+
+background: url(image.png);
+}
+.master-card-img{
+    /* image 47 */
+
+width: 50px;
+height: 41.08px;
+
+background: url(image.png);
+}
+</style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div>
+            <img class="logo-css"
+                src="C:\Users\creddy\OneDrive - NextSphere Technologies\Desktop\Figma-design-images\Logo.jpg"
+                alt="logo">
+
+            <a href="#" class="about-css">About Us</a>
+            <span class="right-border1"></span>
+            <a href="#" class="about-css">Contact Us</a>
+            <span class="right-border1"></span>
+            <a href="#" class="about-css">Blog</a>
+            <span class="right-border1"></span>
+            <a href="#" class="about-css">Site Map</a>
+            <span class="right-border1"></span>
+            <a href="#" class="about-css">Eng</a>
+            <select style="border:none">
+            </select>
+        </div>
+        <div class="search-main-css">
+            <input class="searchbar-css" type="text" placeholder="Search this site">
+            <button class="search-btn-css">
+                <img src="C:\Users\creddy\OneDrive - NextSphere Technologies\Desktop\Figma-design-images\Vector.png"
+                    alt="search">
+            </button>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="text-content">
+            <h1 class="h1-text">Lorem ipsum dolor sit amet</h1>
+            <h3 class="header3-text">Lorem ipsum dolor sit amet</h3>
+            <p class="page1-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend tincidunt posuere eu
+                risus cursus.
+                Senectus sed maecenas viverra tempus at. Nulla aliquam ac diam amet, sagittis, ut ultricies.
+                Urna hendrerit morbi sed gravida. Nulla aliquam ac diam amet, sagittis, ut ultricies.
+                Urna hendrerit morbi sed gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+            <a href="#" class="buynow-btn-css">Buy Now</a>
+        </div>
+        <div class="img1-css">
+            <img src="C:\Users\creddy\OneDrive - NextSphere Technologies\Desktop\Figma-design-images\figma-design-img1.png"
+                alt="Leaf">
+        </div>
+    </div>
+
+    <div class="aboutus-main">
+        <div class="about-box1">
+            <div class="about-box1-1">
+                <img class="about-img1"
+                    src="C:\Users\creddy\OneDrive - NextSphere Technologies\Desktop\Figma-design-images\Rectangle 570.png"
+                    alt="Feature 1">
+
+                <div class="about-desc1">
+                    <h3 class="about-head">About Us</h3>
+                    <p class="about-desc-data1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend
+                        tincidunt posuere eu risus cursus. Senectus sed maecenas viverra tempus at. Nulla aliquam ac
+                        diam amet, sagittis, ut ultricies. Urna hendrerit morbi sed gravida. Nulla aliquam ac diam amet,
+                        sagittis, ut ultricies. Urna hendrerit morbi sed gravida. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Eleifend tincidunt posuere eu risus cursus.</p>
+                    <footer>
+                        <a class="about-footer1">Learn more about →</a>
+                    </footer>
+                </div>
+            </div>
+        </div>
+        <div class="about-box1">
+            <div class="about-box1-1">
+                <img class="about-img1"
+                    src="C:\Users\creddy\OneDrive - NextSphere Technologies\Desktop\Figma-design-images\Rectangle 570.png"
+                    alt="Feature 1">
+
+                <div class="about-desc1">
+                    <h3 class="about-head">About Us</h3>
+                    <p class="about-desc-data1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend
+                        tincidunt posuere eu risus cursus. Senectus sed maecenas viverra tempus at. Nulla aliquam ac
+                        diam amet, sagittis, ut ultricies. Urna hendrerit morbi sed gravida. Nulla aliquam ac diam amet,
+                        sagittis, ut ultricies. Urna hendrerit morbi sed gravida. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Eleifend tincidunt posuere eu risus cursus.</p>
+                    <footer>
+                        <a class="about-footer1">Learn more about →</a>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contactus-main">
+        <div class="contactus-main-combination">
+        <div class="contactus-main-sub">
+            <img src="C:\Users\creddy\OneDrive - NextSphere Technologies\Desktop\Figma-design-images\Group 1.png"
+                alt="contactus">
+        </div>
+        <div class="contactus-right">
+
+            <div class="contact-right-sub1">
+                <div class="contact-right-inputs">
+                    <span class="requred-css">*</span>
+                    <label class="label-fname">First Name</label>
+                    <span class="requred-css">*</span>
+                    <label class="label-fname">Last Name</label>
+                </div>
+                <div class="contact-right-inputs">
+                    <input class="form-inputs" type="text" placeholder="First Name">
+                    <input class="form-inputs" type="text" placeholder="Last Name">
+                </div>
+                    <div class="contact-right-inputs">
+                        <label class="label-fname">Email</label>
+                        <label class="label-fname">Phone Number</label>
+                    </div>
+                    <div class="contact-right-inputs">
+                        <input class="form-inputs" type="email" placeholder="Email">
+                        <input class="form-inputs" type="tel" placeholder="Phone Number">
+
+                    </div>
+
+                    <div class="radio-btn">
+                        <!-- <div class="radio1"> -->
+                        <input class="form-input-radio" type="radio"><span class="radio-label"> UI Developer</span>
+                        <!-- </div> -->
+                        <input class="form-input-radio" type="radio"><span class="radio-label"> UI/UX Designer</span>
+                        <input class="form-input-radio" type="radio"><span class="radio-label">Accessibility
+                            Expert</span>
+                        <input class="form-input-radio" type="radio"><span class="radio-label">QA Engineer</span>
+                        <input class="form-input-radio" type="radio"><span class="radio-label"> Other</span>
+                    </div>
+                <label class="text-message">Message</label>
+                <textarea placeholder="Text here...." class="text-area-css"></textarea>
+
+                <div class="contact-right-inputs">
+                    <input class="form-input-checkbox" type="checkbox"><span class="checkbox-label"> Accept terms</span>
+                    <input class="form-input-checkbox2" type="checkbox"><span class="checkbox-label2"> Accept
+                        terms2</span>
+
+                </div>
+                <div class="send-message-main">
+                <button type="submit" class="send-message">Send Message</button>
+</div>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+    <div class="footer-main">
+        <div class="footer-sub">
+        
+            <div class="footer-top">
+                <div class="footer-top-sub1">
+                    <div>
+                        <p class="footer-plantme-text">PlantMe</p>
+                        <p class="footer-subscribe-text">Subscribe and be the first to know about our news and promotions.</p>
+                    </div>
+                     <div class="plantme-bottom">
+                            <input class="footer-input" type="email" placeholder="example@gmail.com">
+                            <button type="submit" class="subscribe-btn">Subscribe</button> 
+                    </div>
+                </div>
+                <div class="footer-top-sub2">
+                    <p class="aboutus-text">About Us</p>
+                    <p class="contactus-text">Contact Us</p>
+                    <p class="blog-text">Blog</p>
+                    <p class="sitemap-text">Site Map</p>
+                </div>
+                    <div class="footer-top-sub3">
+                        <div>
+                            <p class="footer-sub3-contact">Contacts</p>
+                            <p class="footer-sub3-phone">+38 063 072 0121</p>
+                            <p class="footer-sub3-email">plantme.store@gmail.com</p>
+                        </div>
+                        <div>
+                            <img class="visa-img" src="C:\Users\creddy\OneDrive - NextSphere Technologies\Desktop\Figma-design-images\image 46.png" alt="visa">
+                            <img class="master-card-img" src="C:\Users\creddy\OneDrive - NextSphere Technologies\Desktop\Figma-design-images\image 47.png" alt="mastercard">
+                        </div>
+                    </div>
+
+            </div>
+            
+        </div>
+       
+    </div>
+    <div style="height: 0px;border: 1px solid #E9E9E9;"></div>
+    <div class="footer-end">
+        <p class="plantme">© 2022 PlantMe. All Rights Reserved</p>
+        <div class="footer-end2">
+            <p class="privacy">Privacy Policy</p>
+            <p class="Termsofservice"> Terms of service</p>
+            <p class="Language">Language</p>
+        </div>
+    </div>
+</body>
+</html>
